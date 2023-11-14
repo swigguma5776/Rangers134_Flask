@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="container-fluid justify-content-center">
+    <div class="row shop-header p-5">
+        <div class="col-3 ms-5 d-flex flex-column justify-content-center">
+            <h2>Welcome to your Shop!</h2>
+            <h5>All your products will show up here</h5>
+            <a href="#" class="btn btn-outline-dark mt-3">Create New Products</a>
+        </div>
+    </div>
+    <div class="row bg-dark p-3 shop-stats">
+        <div class="col d-flex justify-content-center">Total # of Customers: 0</div>
+        <div class="col d-flex justify-content-center">Total Sales : $0</div>
+        <div class="col d-flex justify-content-center">Total # of Products: 0</div>
+    </div>
+</div>
+
+
+{% endblock content %}
