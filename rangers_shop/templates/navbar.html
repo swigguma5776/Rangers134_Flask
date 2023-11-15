@@ -12,14 +12,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav link-light">
           <li class="nav-item">
-            <a class="nav-link link-light" aria-current="page" href="#">The Shop</a>
+            <a class="nav-link link-light" aria-current="page" href="/">The Shop</a>
+          </li>
+          {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/logout">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/signin">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light" href="#">Login</a>
+            <a class="nav-link link-light" href="/signup">Register</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="#">Register</a>
-          </li>
+          {% endif %}
         </ul>
       </div>
     </div>

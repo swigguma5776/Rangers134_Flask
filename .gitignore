@@ -1,2 +1,4 @@
 rangers_env
 .env
+migrations
+__pyache__
