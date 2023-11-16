@@ -26,6 +26,11 @@ def signup():
         username = registerform.username.data 
         email = registerform.email.data 
         password = registerform.password.data 
+        # code = registerform.code.data 
+
+        # if code != 5432:
+        #     flash("Code does not match, Please try again")
+        #     return redirect('/signup')
 
         print(email, password, username)
 

@@ -1,0 +1,36 @@
+
+<form action="" method='POST' class="row g-3">
+    {{ form.hidden_tag() }}
+    <div class="col-12">
+        {{ form.name.label }}
+        {{ form.name(class='form-control mt-2', placeholder='Carnivorous Plant') }}
+        {% for error in form.name.errors %}
+            <span class="err-msg">{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div class="col-12">
+        {{ form.image.label }}
+        {{ form.image(class='form-control mt-2') }}
+    </div>
+    <div class="col-12">
+        {{ form.description.label }}
+        {{ form.description(class='form-control mt-2', placeholder='a very hungry plant') }}
+    </div>
+    <div class="col-12">
+        {{ form.price.label }}
+        {{ form.price(class='form-control mt-2', placeholder='$10.99') }}
+        {% for error in form.price.errors %}
+            <span class="err-msg">{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div class="col-12">
+        {{ form.quantity.label }}
+        {{ form.quantity(class='form-control mt-2', placeholder='100') }}
+        {% for error in form.quantity.errors %}
+            <span class="err-msg">{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div class="col-12">
+        {{ form.submit(class='btn btn-primary') }}
+    </div>
+</form>
