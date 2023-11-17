@@ -1,6 +1,7 @@
 #this is our configuration folder to configure flask to our app location & variables needed to run Flask
 
 
+from datetime import timedelta
 import os #operating system 
 from dotenv import load_dotenv #allows us to load our environment variables (variables needed to run application)
 
@@ -32,4 +33,6 @@ class Config():
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'Literally whatever you want as long as its a string. Cool Beans'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False #we dont want a message every single time our database is changed
+    JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
+    JWT_ACCESS_TOKEN_EXPIRES = timedelta(days=365)
 
